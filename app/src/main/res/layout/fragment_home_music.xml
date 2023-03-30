@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/im_options"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_margin="20dp"
+            android:focusable="true"
+            android:src="@drawable/options"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/shadow_search"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/shadow_search"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:backgroundTint="#E4E4E4"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintBottom_toBottomOf="@id/im_options"
+            app:layout_constraintLeft_toRightOf="@+id/im_options"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/im_options">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp">
+
+                <ImageView
+                    android:id="@+id/im_search"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/search"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_search"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sriracha"
+                    android:text="@string/saerch"
+                    app:autoSizeTextType="uniform"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/im_search"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.25"
+
+            />
+
+        <View
+            android:id="@+id/view_favorite"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/custom_drawable"
+            android:focusable="true"
+            app:layout_constraintBottom_toTopOf="@id/guideline"
+            app:layout_constraintDimensionRatio="3:2.2"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/view_list_music"
+            app:layout_constraintTop_toBottomOf="@id/shadow_search"
+
+            />
+
+        <View
+
+            android:id="@+id/view_list_music"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="5dp"
+            android:background="@drawable/custom_drawable"
+            android:focusable="true"
+            app:layout_constraintBottom_toTopOf="@id/guideline"
+            app:layout_constraintDimensionRatio="3:2.2"
+            app:layout_constraintLeft_toRightOf="@id/view_favorite"
+            app:layout_constraintRight_toLeftOf="@id/view_recent"
+            app:layout_constraintTop_toBottomOf="@id/shadow_search" />
+
+        <View
+            android:id="@+id/view_recent"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/custom_drawable"
+            android:focusable="true"
+            app:layout_constraintBottom_toTopOf="@id/guideline"
+            app:layout_constraintDimensionRatio="3:2.2"
+            app:layout_constraintLeft_toRightOf="@id/view_list_music"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/shadow_search" />
+
+        <ImageView
+            android:id="@+id/im_favoerite"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="10dp"
+            android:focusable="true"
+            android:src="@drawable/heart"
+            app:layout_constraintBottom_toBottomOf="@id/view_favorite"
+            app:layout_constraintLeft_toLeftOf="@id/view_favorite"
+            app:layout_constraintTop_toTopOf="@id/view_favorite" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:focusable="true"
+            android:fontFamily="@font/sriracha"
+            android:gravity="left"
+            android:text="@string/favorite"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@id/view_favorite"
+            app:layout_constraintLeft_toLeftOf="@id/view_favorite"
+            app:layout_constraintRight_toRightOf="@id/view_favorite"
+            app:layout_constraintTop_toBottomOf="@id/im_favoerite"
+            tools:ignore="RtlHardcoded" />
+
+        <ImageView
+            android:id="@+id/im_list"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="10dp"
+            android:focusable="true"
+            android:src="@drawable/music_note"
+            app:layout_constraintBottom_toBottomOf="@id/view_list_music"
+            app:layout_constraintLeft_toLeftOf="@id/view_list_music"
+            app:layout_constraintTop_toTopOf="@id/view_list_music" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:focusable="true"
+            android:fontFamily="@font/sriracha"
+            android:gravity="left"
+            android:text="@string/list_music"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@id/view_list_music"
+            app:layout_constraintLeft_toLeftOf="@id/view_list_music"
+            app:layout_constraintRight_toRightOf="@id/view_list_music"
+            app:layout_constraintTop_toBottomOf="@id/im_list"
+            tools:ignore="RtlHardcoded" />
+
+        <ImageView
+            android:id="@+id/im_recent"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="10dp"
+            android:focusable="true"
+            android:src="@drawable/recent"
+            app:layout_constraintBottom_toBottomOf="@id/view_recent"
+            app:layout_constraintLeft_toLeftOf="@id/view_recent"
+            app:layout_constraintTop_toTopOf="@id/view_recent" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:focusable="true"
+            android:fontFamily="@font/sriracha"
+            android:gravity="left"
+            android:text="@string/recent"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@id/view_recent"
+            app:layout_constraintLeft_toLeftOf="@id/view_recent"
+            app:layout_constraintRight_toRightOf="@id/view_recent"
+            app:layout_constraintTop_toBottomOf="@id/im_list"
+            tools:ignore="RtlHardcoded" />
+
+
+        <TextView
+            android:id="@+id/tv_all_music"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:focusable="true"
+            android:fontFamily="@font/sriracha"
+            android:text="Tất cả bài hát"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/guideline" />
+
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_all_music"
+            android:textSize="100sp"
+            >
+
+        </com.google.android.material.tabs.TabLayout>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tab_layout"
+
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

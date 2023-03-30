@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">My Music</string>
+    <string name="action_music">Music</string>
+    <string name="action_music_video">Music video</string>
+    <string name="favorite">Yêu thích</string>
+    <string name="list_music">Danh sách phát</string>
+    <string name="recent">Gần đây</string>
+    <string name="saerch">Tìm kiếm bài hát của bạn</string>
+    <string name="Random">Phát ngẫu nhiên</string>
+    <string name="web">NhacCuaTui.com</string>
+    <string name="letter">A</string>
+    <string name="singer">Anh Tu Atus</string>
+    <string name="quantity">1 bai hat</string>
+</resources>
