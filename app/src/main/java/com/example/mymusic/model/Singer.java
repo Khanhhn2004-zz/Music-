@@ -1,7 +1,9 @@
 package com.example.mymusic.model;
 
 public class Singer {
-    private String letter,nameSinger,quantity;
+    private String letter;
+    private String nameSinger;
+    private String quantity;
 
     public Singer(String letter, String nameSinger, String quantity) {
         this.letter = letter;

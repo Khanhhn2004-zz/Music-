@@ -14,9 +14,9 @@
 
         <ImageView
             android:id="@+id/im_random"
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:src="@drawable/radom_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/random_play"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -35,7 +35,7 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:layout_marginTop="10dp"
-            android:id="@+id/rcl_list_music"
+            android:id="@+id/rcl_list_foler"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:orientation="vertical"

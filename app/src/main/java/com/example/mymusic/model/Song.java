@@ -1,7 +1,9 @@
 package com.example.mymusic.model;
 
 public class Song {
-    private String nameSong,nameSinger,web;
+    private String nameSong;
+    private String nameSinger;
+    private String web;
 
     public Song(String nameSong, String nameSinger, String web) {
         this.nameSong = nameSong;
