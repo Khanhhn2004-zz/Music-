@@ -9,6 +9,10 @@
     <string name="Random">Phát ngẫu nhiên</string>
     <string name="web">NhacCuaTui.com</string>
     <string name="letter">A</string>
+    <string name="song">Bài hát</string>
+    <string name="folder">Thư mục</string>
+    <string name="album">Album</string>
+
     <string name="singer">Anh Tu Atus</string>
     <string name="quantity">1 bai hat</string>
     <string name="name_music">Waitting for you</string>

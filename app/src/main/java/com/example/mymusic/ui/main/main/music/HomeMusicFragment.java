@@ -32,16 +32,16 @@ public class HomeMusicFragment extends BaseBindingFragment<FragmentHomeMusicBind
             public void onConfigureTab(@NonNull TabLayout.Tab tab, int position) {
                 switch (position) {
                     case 0:
-                        tab.setText("Bài hát");
+                        tab.setText("@string/song");
                         break;
                     case 1:
-                        tab.setText("Ca sĩ");
+                        tab.setText("@string/singer");
                         break;
                     case 2:
-                        tab.setText("Album");
+                        tab.setText("@string/album");
                         break;
                     case 3:
-                        tab.setText("Thư mục");
+                        tab.setText("@string/folder");
                         break;
                 }
             }
