@@ -14,20 +14,23 @@
 
         <ImageView
             android:id="@+id/im_random"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/random_play"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/play_music"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:padding="10dp"
+            android:background="@drawable/custom_drawable_play"  />
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:fontFamily="@font/alkatra_font"
+            android:fontFamily="@font/roboto"
             android:text="@string/Random"
-            android:textSize="20sp"
+            android:textSize="17sp"
             android:textStyle="bold"
+            android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="@id/im_random"
             app:layout_constraintLeft_toRightOf="@id/im_random"
             app:layout_constraintRight_toRightOf="parent"

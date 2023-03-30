@@ -6,14 +6,13 @@ import android.view.View;
 import com.example.mymusic.R;
 import com.example.mymusic.databinding.FragmentTabFolderBinding;
 import com.example.mymusic.model.Folder;
-import com.example.mymusic.model.Folder;
 import com.example.mymusic.ui.adapter.recycler.FolderAdapter;
 import com.example.mymusic.ui.base.BaseBindingFragment;
 
 import java.util.LinkedList;
 import java.util.List;
 
-public class FragmentTabFolder extends BaseBindingFragment<FragmentTabFolderBinding> {
+public class TabFolderFragment extends BaseBindingFragment<FragmentTabFolderBinding> {
 
     private final List<Folder> listFolder = new LinkedList<>();
 

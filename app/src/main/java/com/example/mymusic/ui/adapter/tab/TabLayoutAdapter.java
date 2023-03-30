@@ -7,19 +7,18 @@ import androidx.fragment.app.FragmentManager;
 import androidx.lifecycle.Lifecycle;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
-import com.example.mymusic.ui.main.main.music.tab.FragmentTabAlbum;
-import com.example.mymusic.ui.main.main.music.tab.FragmentTabFolder;
-import com.example.mymusic.ui.main.main.music.tab.FragmentTabSinger;
-import com.example.mymusic.ui.main.main.music.tab.FragmentTabSong;
-import com.example.mymusic.ui.main.main.video.Tab2Fragment;
+import com.example.mymusic.ui.main.main.music.tab.TabAlbumFragment;
+import com.example.mymusic.ui.main.main.music.tab.TabFolderFragment;
+import com.example.mymusic.ui.main.main.music.tab.TabSingerFragment;
+import com.example.mymusic.ui.main.main.music.tab.TabSongFragment;
 
 public class TabLayoutAdapter extends FragmentStateAdapter {
 
 
-    private FragmentTabSong fragmentTabSong;
-    private FragmentTabSinger fragmentTabSinger;
-    private FragmentTabAlbum fragmentTabAlbum;
-    private FragmentTabFolder fragmentTabFolder;
+    private TabSongFragment tabSongFragment;
+    private TabSingerFragment tabSingerFragment;
+    private TabAlbumFragment tabAlbumFragment;
+    private TabFolderFragment tabFolderFragment;
 
 
     public TabLayoutAdapter(@NonNull FragmentActivity fragmentActivity) {
@@ -40,21 +39,21 @@ public class TabLayoutAdapter extends FragmentStateAdapter {
         switch (position) {
 
             case 1:
-                if (fragmentTabSinger == null)
-                    fragmentTabSinger = new FragmentTabSinger();
-                return new FragmentTabSinger();
+                if (tabSingerFragment == null)
+                    tabSingerFragment = new TabSingerFragment();
+                return new TabSingerFragment();
             case 2:
-                if (fragmentTabAlbum == null)
-                    fragmentTabAlbum = new FragmentTabAlbum();
-                return new FragmentTabAlbum();
+                if (tabAlbumFragment == null)
+                    tabAlbumFragment = new TabAlbumFragment();
+                return new TabAlbumFragment();
             case 3:
-                if (fragmentTabFolder == null)
-                    fragmentTabFolder = new FragmentTabFolder();
-                return new FragmentTabFolder();
+                if (tabFolderFragment == null)
+                    tabFolderFragment = new TabFolderFragment();
+                return tabFolderFragment;
             default:
-                if (fragmentTabSong == null)
-                    fragmentTabSong = new FragmentTabSong();
-                return new FragmentTabSong();
+                if (tabSongFragment == null)
+                    tabSongFragment = new TabSongFragment();
+                return tabSongFragment;
         }
     }
 

@@ -12,7 +12,7 @@ import com.example.mymusic.ui.base.BaseBindingFragment;
 import java.util.LinkedList;
 import java.util.List;
 
-public class FragmentTabSong extends BaseBindingFragment<FragmentTabSongBinding> {
+public class TabSongFragment extends BaseBindingFragment<FragmentTabSongBinding> {
 
     private final List<Song> listMusic = new LinkedList<>();
 

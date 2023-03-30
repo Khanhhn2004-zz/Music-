@@ -6,15 +6,13 @@ import android.view.View;
 import com.example.mymusic.R;
 import com.example.mymusic.databinding.FragmentTabSingerBinding;
 import com.example.mymusic.model.Singer;
-import com.example.mymusic.model.Song;
 import com.example.mymusic.ui.adapter.recycler.SingerAdapter;
-import com.example.mymusic.ui.adapter.recycler.SongAdaptter;
 import com.example.mymusic.ui.base.BaseBindingFragment;
 
 import java.util.LinkedList;
 import java.util.List;
 
-public class FragmentTabSinger extends BaseBindingFragment<FragmentTabSingerBinding> {
+public class TabSingerFragment extends BaseBindingFragment<FragmentTabSingerBinding> {
     private final List<Singer> listSinger = new LinkedList<>();
 
 

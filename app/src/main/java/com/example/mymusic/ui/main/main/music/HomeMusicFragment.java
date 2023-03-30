@@ -1,11 +1,9 @@
 package com.example.mymusic.ui.main.main.music;
 
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.View;
 
 import androidx.annotation.NonNull;
-import androidx.databinding.DataBindingUtil;
 
 import com.example.mymusic.R;
 import com.example.mymusic.databinding.FragmentHomeMusicBinding;
@@ -14,7 +12,7 @@ import com.example.mymusic.ui.base.BaseBindingFragment;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 
-public class FragmentHomeMusic extends BaseBindingFragment<FragmentHomeMusicBinding> {
+public class HomeMusicFragment extends BaseBindingFragment<FragmentHomeMusicBinding> {
 
     @Override
     public int getLayoutId() {

@@ -7,12 +7,12 @@ import androidx.fragment.app.FragmentManager;
 import androidx.lifecycle.Lifecycle;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
-import com.example.mymusic.ui.main.main.music.FragmentHomeMusic;
-import com.example.mymusic.ui.main.main.video.Tab2Fragment;
+import com.example.mymusic.ui.main.main.music.HomeMusicFragment;
+import com.example.mymusic.ui.main.main.video.VideoFragment;
 
 public class ViewPagerAdapter extends FragmentStateAdapter {
-    private Tab2Fragment tab2Fragment;
-    private FragmentHomeMusic fragmentHomeMusic;
+    private VideoFragment videoFragment;
+    private HomeMusicFragment homeMusicFragment;
 
 
     public ViewPagerAdapter(@NonNull FragmentActivity fragmentActivity) {
@@ -32,13 +32,13 @@ public class ViewPagerAdapter extends FragmentStateAdapter {
     public Fragment createFragment(int position) {
         switch (position) {
             case 1:
-                if (tab2Fragment == null)
-                    tab2Fragment = new Tab2Fragment();
-            return new Tab2Fragment();
+                if (videoFragment == null)
+                    videoFragment = new VideoFragment();
+            return videoFragment;
             default:
-                if (fragmentHomeMusic == null)
-                    fragmentHomeMusic = new FragmentHomeMusic();
-                return new FragmentHomeMusic();
+                if (homeMusicFragment == null)
+                    homeMusicFragment = new HomeMusicFragment();
+                return homeMusicFragment;
         }
     }
 
