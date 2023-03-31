@@ -13,8 +13,8 @@
 
         <ImageView
             android:id="@+id/im_options"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_margin="20dp"
             android:focusable="true"
             android:src="@drawable/options"
@@ -27,7 +27,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="10dp"
-            android:backgroundTint="#E4E4E4"
+            android:backgroundTint="#F3EFEF"
             app:cardCornerRadius="20dp"
             app:layout_constraintBottom_toBottomOf="@id/im_options"
             app:layout_constraintLeft_toRightOf="@+id/im_options"
@@ -88,7 +88,7 @@
             android:id="@+id/view_recent"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
             android:background="@drawable/custom_drawable_recent"
             android:focusable="true"
             app:layout_constraintBottom_toTopOf="@id/guideline"
@@ -99,8 +99,8 @@
 
         <ImageView
             android:id="@+id/im_favoerite"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:focusable="true"
             android:src="@drawable/heart"
@@ -126,8 +126,8 @@
 
         <ImageView
             android:id="@+id/im_list"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:focusable="true"
             android:src="@drawable/music_note"
@@ -154,14 +154,16 @@
 
         <ImageView
             android:id="@+id/im_recent"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:focusable="true"
+
             android:src="@drawable/recent"
             app:layout_constraintBottom_toBottomOf="@id/view_recent"
             app:layout_constraintLeft_toLeftOf="@id/view_recent"
-            app:layout_constraintTop_toTopOf="@id/view_recent" />
+            app:layout_constraintTop_toTopOf="@id/view_recent"
+             />
 
         <TextView
             android:textSize="12sp"
@@ -188,7 +190,7 @@
             android:focusable="true"
             android:fontFamily="@font/roboto"
             android:textColor="@color/black"
-            android:text="Tất cả bài hát"
+            android:text="@string/all_music"
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintTop_toBottomOf="@id/guideline" />
@@ -198,12 +200,14 @@
             android:id="@+id/tab_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="10dp"
             app:layout_behavior="@string/appbar_scrolling_view_behavior"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_all_music"
-            android:textSize="100sp"
+            app:tabIndicatorFullWidth="false"
+            app:tabSelectedTextColor="@color/black"
+            app:tabTextAppearance="@style/MineCustomTabText"
+            app:tabIndicatorAnimationDuration="500"
             >
 
         </com.google.android.material.tabs.TabLayout>

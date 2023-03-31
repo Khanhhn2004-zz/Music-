@@ -13,15 +13,26 @@
 
         <ImageView
             android:id="@+id/im_random"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:src="@drawable/play_music"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:padding="10dp"
             android:background="@drawable/custom_drawable_play" />
 
+        <ImageView
+            android:id="@+id/im_up_down"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/uo_and_down"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_random"
+            app:layout_constraintBottom_toBottomOf="@id/tv_random"
+            android:padding="10dp"/>
+
         <TextView
+            android:id="@+id/tv_random"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -32,7 +43,7 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@id/im_random"
             app:layout_constraintLeft_toRightOf="@id/im_random"
-            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/im_up_down"
             app:layout_constraintTop_toTopOf="@id/im_random" />
 
         <androidx.recyclerview.widget.RecyclerView

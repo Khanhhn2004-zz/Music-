@@ -27,6 +27,7 @@ public class HomeMusicFragment extends BaseBindingFragment<FragmentHomeMusicBind
 
         TabLayoutAdapter tabLayoutAdapter = new TabLayoutAdapter(this);
         binding.viewPager.setAdapter(tabLayoutAdapter);
+        binding.tabLayout.setTabRippleColor(null);
         new TabLayoutMediator(binding.tabLayout, binding.viewPager, new TabLayoutMediator.TabConfigurationStrategy() {
             @Override
             public void onConfigureTab(@NonNull TabLayout.Tab tab, int position) {

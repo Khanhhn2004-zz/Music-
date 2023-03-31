@@ -37,9 +37,9 @@
 
         <ImageView
             android:id="@+id/im_phone"
-            android:layout_width="12dp"
-            android:layout_height="12dp"
-            android:src="@drawable/iphone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/phone"
             app:layout_constraintTop_toTopOf="@+id/tv_name_singer"
             app:layout_constraintBottom_toBottomOf="@+id/tv_name_singer"
             app:layout_constraintLeft_toLeftOf="parent"
