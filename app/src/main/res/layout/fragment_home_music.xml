@@ -51,7 +51,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.27"
+            app:layout_constraintGuide_percent="0.25"
 
             />
 
@@ -67,15 +67,13 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toLeftOf="@id/view_list_music"
             app:layout_constraintTop_toBottomOf="@id/shadow_search"
-
             />
 
         <View
-
             android:id="@+id/view_list_music"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginHorizontal="5dp"
+            android:layout_marginHorizontal="10dp"
             android:background="@drawable/custom_drawable_list_music"
             android:focusable="true"
             app:layout_constraintBottom_toTopOf="@id/guideline"
