@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainnav"
+    app:startDestination="@id/fragment_home_music">
+
+    <fragment
+        android:id="@+id/fragment_home_music"
+        android:name="com.example.mymusic.ui.main.main.music.HomeMusicFragment"
+        android:label="@string/action_music"
+        tools:layout="@layout/fragment_home_music" />
+
+    <fragment
+        android:id="@+id/fragment_home_music_video"
+        android:name="com.example.mymusic.ui.main.main.video.VideoFragment"
+        android:label="@string/action_music_video"
+        tools:layout="@layout/fragment_video" />
+
+    <fragment
+        android:id="@+id/fragment_tab_song"
+        android:name="com.example.mymusic.ui.main.main.music.tab.TabSongFragment"
+        android:label="@string/song"
+        tools:layout="@layout/fragment_tab_song" />
+
+    <fragment
+        android:id="@+id/fragment_tab_singer"
+        android:name="com.example.mymusic.ui.main.main.music.tab.TabSingerFragment"
+        android:label="@string/singer"
+        tools:layout="@layout/fragment_tab_singer" />
+
+    <fragment
+        android:id="@+id/fragment_tab_album"
+        android:name="com.example.mymusic.ui.main.main.music.tab.TabAlbumFragment"
+        android:label="@string/album"
+        tools:layout="@layout/fragment_tab_album" />
+
+    <fragment
+        android:id="@+id/fragment_tab_folder"
+        android:name="com.example.mymusic.ui.main.main.music.tab.TabFolderFragment"
+        android:label="@string/folder"
+        tools:layout="@layout/fragment_tab_folder" />
+
+
+</navigation>

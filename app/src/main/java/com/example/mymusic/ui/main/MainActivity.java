@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import androidx.annotation.NonNull;
+import androidx.navigation.NavController;
+import androidx.navigation.fragment.NavHostFragment;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.example.mymusic.R;
@@ -17,6 +19,8 @@ import com.google.android.material.tabs.TabLayoutMediator;
 
 public class MainActivity extends BaseBindingActivity<ActivityMainBinding> {
 
+    public NavHostFragment navHostFragment;
+    public NavController navController;
     private ViewPagerAdapter viewPagerAdapter;
 
     @Override
@@ -26,6 +30,11 @@ public class MainActivity extends BaseBindingActivity<ActivityMainBinding> {
 
     @Override
     public void setupView(Bundle savedInstanceState) {
+        navHostFragment =
+                (NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment);
+        navController = navHostFragment.getNavController();
+
+
         initViewpagerAdapter();
     }
 

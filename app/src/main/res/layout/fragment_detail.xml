@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/mck"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/im_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/down"
+            app:layout_constraintBottom_toBottomOf="@id/tab_layout"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tab_layout" />
+
+        <ImageView
+            android:id="@+id/im_three_dots_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/three_dot_white"
+            app:layout_constraintBottom_toBottomOf="@id/tab_layout"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tab_layout" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            app:layout_constraintLeft_toRightOf="@id/im_back"
+            app:layout_constraintRight_toLeftOf="@id/im_three_dots_vertical"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tabIndicatorAnimationDuration="500"
+            app:tabIndicatorFullWidth="false"
+            app:tabSelectedTextColor="@color/black"
+            app:tabTextAppearance="@style/MineCustomTabText">
+
+        </com.google.android.material.tabs.TabLayout>
+
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/view_pager_detail"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            app:layout_constraintBottom_toTopOf="@id/tv_name_song"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tab_layout"
+
+            />
+
+
+        <TextView
+            android:id="@+id/tv_name_song"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:text="@string/name_music"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/im_favoerite"
+            app:layout_constraintTop_toBottomOf="@id/view_pager_detail" />
+
+        <TextView
+            android:id="@+id/tv_name_singer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:text="@string/singer"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toTopOf="@id/seekbar_music"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_name_song" />
+
+        <ImageView
+            android:id="@+id/im_favoerite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="30dp"
+            android:src="@drawable/heart_white"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_pager_detail" />
+
+        <SeekBar
+            android:id="@+id/seekbar_music"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            app:layout_constraintBottom_toTopOf="@id/tv_time_start"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_name_singer"
+
+            />
+
+        <TextView
+            android:id="@+id/tv_time_start"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/time"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/seekbar_music" />
+
+        <TextView
+            android:id="@+id/tv_time_end"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="30dp"
+            android:text="@string/time"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/seekbar_music" />
+
+        <ImageView
+            android:id="@+id/im_play_music"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/custom_drawable_button_play"
+            android:padding="10dp"
+            android:src="@drawable/button_play"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/seekbar_music" />
+
+        <ImageView
+            android:id="@+id/im_back_music"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:src="@drawable/start"
+            app:layout_constraintBottom_toBottomOf="@id/im_play_music"
+            app:layout_constraintLeft_toRightOf="@id/im_repeat"
+            app:layout_constraintRight_toLeftOf="@id/im_play_music"
+            app:layout_constraintTop_toTopOf="@id/im_play_music" />
+
+        <ImageView
+            android:id="@+id/im_forward"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:src="@drawable/end"
+            app:layout_constraintBottom_toBottomOf="@id/im_play_music"
+            app:layout_constraintLeft_toRightOf="@id/im_play_music"
+            app:layout_constraintRight_toLeftOf="@id/im_list_repeat"
+            app:layout_constraintTop_toTopOf="@id/im_play_music" />
+
+        <ImageView
+            android:id="@+id/im_repeat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:src="@drawable/repeat"
+            app:layout_constraintBottom_toBottomOf="@id/im_back_music"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/im_back_music"
+            app:layout_constraintTop_toTopOf="@id/im_back_music" />
+
+        <ImageView
+            android:id="@+id/im_list_repeat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:src="@drawable/playlist"
+            app:layout_constraintBottom_toBottomOf="@id/im_forward"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/im_forward"
+            app:layout_constraintTop_toTopOf="@id/im_forward" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
